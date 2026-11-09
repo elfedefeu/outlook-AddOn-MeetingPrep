@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+  xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides/1.0"
+  xsi:type="MailApp">
+  <Id>7c0d4a52-3b1e-4c8a-9f6e-2a5d8e1b9c43</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Lambert</ProviderName>
+  <DefaultLocale>en-US</DefaultLocale>
+  <DisplayName DefaultValue="Meeting Prep"/>
+  <Description DefaultValue="Prep for a meeting in one pane: agenda, people, external flags, past emails, checklist and notes."/>
+  <IconUrl DefaultValue="https://github.com/elfedefeu/outlook-AddOn-MeetingPrep/icon-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://github.com/elfedefeu/outlook-AddOn-MeetingPrep/icon-128.png"/>
+  <SupportUrl DefaultValue="https://github.com/elfedefeu/outlook-AddOn-MeetingPrep/"/>
+  <AppDomains><AppDomain>https://github.com/elfedefeu/outlook-AddOn-MeetingPrep</AppDomain></AppDomains>
+  <Hosts><Host Name="Mailbox"/></Hosts>
+  <Requirements>
+    <Sets><Set Name="Mailbox" MinVersion="1.8"/></Sets>
+  </Requirements>
+  <FormSettings>
+    <Form xsi:type="ItemRead">
+      <DesktopSettings>
+        <SourceLocation DefaultValue="https://github.com/elfedefeu/outlook-AddOn-MeetingPrep/taskpane.html"/>
+        <RequestedHeight>450</RequestedHeight>
+      </DesktopSettings>
+    </Form>
+  </FormSettings>
+  <Permissions>ReadItem</Permissions>
+  <Rule xsi:type="RuleCollection" Mode="Or">
+    <Rule xsi:type="ItemIs" ItemType="Appointment" FormType="Read"/>
+  </Rule>
+  <DisableEntityHighlighting>false</DisableEntityHighlighting>
+
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
+      <Requirements>
+        <bt:Sets DefaultMinVersion="1.8"><bt:Set Name="Mailbox"/></bt:Sets>
+      </Requirements>
+      <Hosts>
+        <Host xsi:type="MailHost">
+          <DesktopFormFactor>
+            <ExtensionPoint xsi:type="AppointmentAttendeeCommandSurface">
+              <OfficeTab id="TabDefault">
+                <Group id="prepGroup">
+                  <Label resid="GroupLabel"/>
+                  <Control xsi:type="Button" id="prepButton">
+                    <Label resid="BtnLabel"/>
+                    <Supertip>
+                      <Title resid="BtnLabel"/>
+                      <Description resid="BtnTip"/>
+                    </Supertip>
+                    <Icon>
+                      <bt:Image size="16" resid="Icon16"/>
+                      <bt:Image size="32" resid="Icon32"/>
+                      <bt:Image size="80" resid="Icon80"/>
+                    </Icon>
+                    <Action xsi:type="ShowTaskpane">
+                      <SourceLocation resid="PaneUrl"/>
+                    </Action>
+                  </Control>
+                </Group>
+              </OfficeTab>
+            </ExtensionPoint>
+          </DesktopFormFactor>
+        </Host>
+      </Hosts>
+      <Resources>
+        <bt:Images>
+          <bt:Image id="Icon16" DefaultValue="https://github.com/elfedefeu/outlook-AddOn-MeetingPrep/icon-16.png"/>
+          <bt:Image id="Icon32" DefaultValue="https://github.com/elfedefeu/outlook-AddOn-MeetingPrep/icon-32.png"/>
+          <bt:Image id="Icon80" DefaultValue="https://github.com/elfedefeu/outlook-AddOn-MeetingPrep/icon-80.png"/>
+        </bt:Images>
+        <bt:Urls>
+          <bt:Url id="PaneUrl" DefaultValue="https://github.com/elfedefeu/outlook-AddOn-MeetingPrep/taskpane.html"/>
+        </bt:Urls>
+        <bt:ShortStrings>
+          <bt:String id="GroupLabel" DefaultValue="Meeting Prep"/>
+          <bt:String id="BtnLabel" DefaultValue="Prep"/>
+        </bt:ShortStrings>
+        <bt:LongStrings>
+          <bt:String id="BtnTip" DefaultValue="Agenda, people, past emails, checklist and notes for this meeting."/>
+        </bt:LongStrings>
+      </Resources>
+    </VersionOverrides>
+  </VersionOverrides>
+</OfficeApp>

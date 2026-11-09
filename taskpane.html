@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meeting Prep</title>
+  <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+  <link rel="stylesheet" href="taskpane.css" />
+</head>
+<body>
+  <main id="app" hidden>
+    <header>
+      <h1 id="subject"></h1>
+      <p id="when" class="muted"></p>
+      <p id="countdown" class="pill"></p>
+      <div id="join" hidden><a id="joinLink" class="btn primary" target="_blank" rel="noopener">Join meeting</a></div>
+      <p id="where" class="muted"></p>
+    </header>
+
+    <section>
+      <h2>Agenda</h2>
+      <div id="agendaWarn" class="warn" hidden>No agenda found in the invite. Consider asking the organizer.</div>
+      <ul id="agenda"></ul>
+    </section>
+
+    <section>
+      <h2>People <span id="peopleCount" class="muted"></span></h2>
+      <div id="extWarn" class="warn" hidden></div>
+      <ul id="people"></ul>
+    </section>
+
+    <section>
+      <h2>Find context</h2>
+      <div class="row">
+        <a id="searchSubject" class="btn" target="_blank" rel="noopener">Emails on this topic</a>
+      </div>
+      <p class="muted small">People links above open a search for past emails with that person.</p>
+    </section>
+
+    <section>
+      <h2>Prep checklist</h2>
+      <ul id="checklist" class="checks"></ul>
+    </section>
+
+    <section>
+      <h2>My notes</h2>
+      <textarea id="notes" rows="6" placeholder="Goals, questions, decisions needed..."></textarea>
+      <p class="muted small">Saved automatically to your mailbox settings.</p>
+    </section>
+
+    <footer>
+      <button id="copy" class="btn primary">Copy prep brief</button>
+      <span id="copied" class="muted small" hidden>Copied</span>
+    </footer>
+  </main>
+  <p id="msg" class="muted">Loading...</p>
+  <script src="taskpane.js"></script>
+</body>
+</html>
