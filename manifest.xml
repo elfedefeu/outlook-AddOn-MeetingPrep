@@ -10,10 +10,10 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Meeting Prep"/>
   <Description DefaultValue="Prep for a meeting in one pane: agenda, people, external flags, past emails, checklist and notes."/>
-  <IconUrl DefaultValue="https://github.com/elfedefeu/outlook-AddOn-MeetingPrep/icon-64.png"/>
-  <HighResolutionIconUrl DefaultValue="https://github.com/elfedefeu/outlook-AddOn-MeetingPrep/icon-128.png"/>
-  <SupportUrl DefaultValue="https://github.com/elfedefeu/outlook-AddOn-MeetingPrep/"/>
-  <AppDomains><AppDomain>https://github.com/elfedefeu/outlook-AddOn-MeetingPrep</AppDomain></AppDomains>
+  <IconUrl DefaultValue="https://elfedefeu.github.io/outlook-AddOn-MeetingPrep//icon-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://elfedefeu.github.io/outlook-AddOn-MeetingPrep//icon-128.png"/>
+  <SupportUrl DefaultValue="https://elfedefeu.github.io/outlook-AddOn-MeetingPrep//"/>
+  <AppDomains><AppDomain>https://elfedefeu.github.io/outlook-AddOn-MeetingPrep/</AppDomain></AppDomains>
   <Hosts><Host Name="Mailbox"/></Hosts>
   <Requirements>
     <Sets><Set Name="Mailbox" MinVersion="1.8"/></Sets>
@@ -21,7 +21,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://github.com/elfedefeu/outlook-AddOn-MeetingPrep/taskpane.html"/>
+        <SourceLocation DefaultValue="https://elfedefeu.github.io/outlook-AddOn-MeetingPrep//taskpane.html"/>
         <RequestedHeight>450</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -67,12 +67,12 @@
       </Hosts>
       <Resources>
         <bt:Images>
-          <bt:Image id="Icon16" DefaultValue="https://github.com/elfedefeu/outlook-AddOn-MeetingPrep/icon-16.png"/>
-          <bt:Image id="Icon32" DefaultValue="https://github.com/elfedefeu/outlook-AddOn-MeetingPrep/icon-32.png"/>
-          <bt:Image id="Icon80" DefaultValue="https://github.com/elfedefeu/outlook-AddOn-MeetingPrep/icon-80.png"/>
+          <bt:Image id="Icon16" DefaultValue="https://elfedefeu.github.io/outlook-AddOn-MeetingPrep//icon-16.png"/>
+          <bt:Image id="Icon32" DefaultValue="https://elfedefeu.github.io/outlook-AddOn-MeetingPrep//icon-32.png"/>
+          <bt:Image id="Icon80" DefaultValue="https://elfedefeu.github.io/outlook-AddOn-MeetingPrep//icon-80.png"/>
         </bt:Images>
         <bt:Urls>
-          <bt:Url id="PaneUrl" DefaultValue="https://github.com/elfedefeu/outlook-AddOn-MeetingPrep/taskpane.html"/>
+          <bt:Url id="PaneUrl" DefaultValue="https://elfedefeu.github.io/outlook-AddOn-MeetingPrep//taskpane.html"/>
         </bt:Urls>
         <bt:ShortStrings>
           <bt:String id="GroupLabel" DefaultValue="Meeting Prep"/>
